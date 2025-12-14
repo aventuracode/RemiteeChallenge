@@ -1,0 +1,212 @@
+[
+  {
+    "Titulo": "Padre Rico, Padre Pobre",
+    "Autor": "Robert Kiyosaki",
+    "Descripcion": "Enseñanzas sobre educación financiera y mentalidad de inversión.",
+    "CategoriaId": 1,
+    "CreatedAt": "2025-12-11"
+  },
+  {
+    "Titulo": "Los 7 hábitos de la gente altamente efectiva",
+    "Autor": "Stephen R. Covey",
+    "Descripcion": "Principios para el crecimiento personal y profesional.",
+    "CategoriaId": 1,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "El poder del ahora",
+    "Autor": "Eckhart Tolle",
+    "Descripcion": "Reflexiones sobre la conciencia y el presente.",
+    "CategoriaId": 6,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "1984",
+    "Autor": "George Orwell",
+    "Descripcion": "Novela distópica sobre vigilancia y control.",
+    "CategoriaId": 4,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Un mundo feliz",
+    "Autor": "Aldous Huxley",
+    "Descripcion": "Distopía sobre una sociedad controlada por la tecnología.",
+    "CategoriaId": 4,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Cien años de soledad",
+    "Autor": "Gabriel García Márquez",
+    "Descripcion": "Saga familiar emblemática del realismo mágico.",
+    "CategoriaId": 2,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Don Quijote de la Mancha",
+    "Autor": "Miguel de Cervantes",
+    "Descripcion": "Clásico de la literatura española.",
+    "CategoriaId": 2,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "El señor de los anillos: La comunidad del anillo",
+    "Autor": "J. R. R. Tolkien",
+    "Descripcion": "Aventura épica en un mundo de fantasía.",
+    "CategoriaId": 3,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Harry Potter y la piedra filosofal",
+    "Autor": "J. K. Rowling",
+    "Descripcion": "El inicio de una saga mágica.",
+    "CategoriaId": 3,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Dune",
+    "Autor": "Frank Herbert",
+    "Descripcion": "Épica de ciencia ficción y política interplanetaria.",
+    "CategoriaId": 4,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Sapiens: De animales a dioses",
+    "Autor": "Yuval Noah Harari",
+    "Descripcion": "Historia de la humanidad desde una mirada moderna.",
+    "CategoriaId": 5,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Breve historia del tiempo",
+    "Autor": "Stephen Hawking",
+    "Descripcion": "Explicación accesible del universo y sus leyes.",
+    "CategoriaId": 5,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "La República",
+    "Autor": "Platón",
+    "Descripcion": "Diálogo filosófico sobre la justicia y el Estado.",
+    "CategoriaId": 6,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Meditaciones",
+    "Autor": "Marco Aurelio",
+    "Descripcion": "Reflexiones personales del emperador estoico.",
+    "CategoriaId": 6,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Clean Code",
+    "Autor": "Robert C. Martin",
+    "Descripcion": "Buenas prácticas para escribir código limpio.",
+    "CategoriaId": 7,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "The Pragmatic Programmer",
+    "Autor": "Andrew Hunt & David Thomas",
+    "Descripcion": "Consejos prácticos para desarrolladores de software.",
+    "CategoriaId": 7,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Introducción a los algoritmos",
+    "Autor": "Thomas H. Cormen",
+    "Descripcion": "Referencia académica sobre algoritmos.",
+    "CategoriaId": 8,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Aprender a aprender",
+    "Autor": "Barbara Oakley",
+    "Descripcion": "Técnicas efectivas para el aprendizaje.",
+    "CategoriaId": 8,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Veinte poemas de amor y una canción desesperada",
+    "Autor": "Pablo Neruda",
+    "Descripcion": "Colección de poemas románticos.",
+    "CategoriaId": 9,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Residencia en la tierra",
+    "Autor": "Pablo Neruda",
+    "Descripcion": "Poesía existencial y surrealista.",
+    "CategoriaId": 9,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "El Aleph",
+    "Autor": "Jorge Luis Borges",
+    "Descripcion": "Colección de cuentos filosóficos y fantásticos.",
+    "CategoriaId": 10,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Ficciones",
+    "Autor": "Jorge Luis Borges",
+    "Descripcion": "Relatos breves con profundidad conceptual.",
+    "CategoriaId": 10,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Crónica de una muerte anunciada",
+    "Autor": "Gabriel García Márquez",
+    "Descripcion": "Novela corta sobre el destino y la fatalidad.",
+    "CategoriaId": 2,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Rayuela",
+    "Autor": "Julio Cortázar",
+    "Descripcion": "Novela experimental y fragmentada.",
+    "CategoriaId": 2,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "El arte de la guerra",
+    "Autor": "Sun Tzu",
+    "Descripcion": "Tratado clásico de estrategia militar.",
+    "CategoriaId": 5,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Padre rico, padre pobre",
+    "Autor": "Robert T. Kiyosaki",
+    "Descripcion": "Educación financiera básica.",
+    "CategoriaId": 1,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Atomic Habits",
+    "Autor": "James Clear",
+    "Descripcion": "Construcción de hábitos efectivos.",
+    "CategoriaId": 1,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "El Hobbit",
+    "Autor": "J. R. R. Tolkien",
+    "Descripcion": "Aventura previa a El Señor de los Anillos.",
+    "CategoriaId": 3,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "Fundación",
+    "Autor": "Isaac Asimov",
+    "Descripcion": "Saga de ciencia ficción sobre imperios y conocimiento.",
+    "CategoriaId": 4,
+    "CreatedAt": "2025-12-13"
+  },
+  {
+    "Titulo": "El código Da Vinci",
+    "Autor": "Dan Brown",
+    "Descripcion": "Thriller histórico con enigmas religiosos.",
+    "CategoriaId": 2,
+    "CreatedAt": "2025-12-13"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Nombre": "Poesía",
+    "Descripcion": "Obras literarias que expresan sentimientos, emociones y reflexiones a través del lenguaje poético."
+  },
+  {
+    "Nombre": "Novela",
+    "Descripcion": "Narraciones extensas de ficción con desarrollo profundo de personajes y tramas."
+  },
+  {
+    "Nombre": "Cuento",
+    "Descripcion": "Relatos breves de ficción con una estructura concisa y final definido."
+  },
+  {
+    "Nombre": "Fantasía",
+    "Descripcion": "Historias ambientadas en mundos imaginarios con elementos mágicos o sobrenaturales."
+  },
+  {
+    "Nombre": "Ciencia Ficción",
+    "Descripcion": "Obras que exploran avances científicos, tecnológicos y sus consecuencias."
+  },
+  {
+    "Nombre": "Historia",
+    "Descripcion": "Libros basados en hechos históricos reales y contextos del pasado."
+  },
+  {
+    "Nombre": "Filosofía",
+    "Descripcion": "Textos que reflexionan sobre la existencia, el conocimiento y la ética."
+  },
+  {
+    "Nombre": "Autoayuda",
+    "Descripcion": "Libros orientados al desarrollo personal y la mejora de habilidades individuales."
+  },
+  {
+    "Nombre": "Tecnología",
+    "Descripcion": "Obras relacionadas con programación, informática y avances tecnológicos."
+  },
+  {
+    "Nombre": "Educación",
+    "Descripcion": "Materiales diseñados para el aprendizaje y la enseñanza de distintos temas."
+  }
+]
