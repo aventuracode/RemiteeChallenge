@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Remitee.Business.Data;
 using Remitee.WebApi;
@@ -18,12 +17,6 @@ public class Program
                 var context = services.GetRequiredService<RemiteeDbContext>();
                 await context.Database.MigrateAsync();
                 await RemiteeDbContextData.CargarDataAsync(context, loggerFactory);
-
-                //var userManager = services.GetRequiredService<UserManager<Usuario>>();
-                //var identityContext = services.GetRequiredService<SeguridadDBContext>();
-                //await identityContext.Database.MigrateAsync();
-
-                //await SeguridadDBContextData.SeedUserAsync(userManager);
 
             }
             catch (Exception e)
