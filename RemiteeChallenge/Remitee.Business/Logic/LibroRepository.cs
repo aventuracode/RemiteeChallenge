@@ -25,14 +25,5 @@ namespace Remitee.Business.Logic
                 .Include(p => p.Categoria)
                 .ToListAsync();
         }
-        //public Task<Libro> GetLibroByIdAsync(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public Task<IReadOnlyList<Libro>> GetLibrosAsync()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

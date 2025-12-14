@@ -11,7 +11,6 @@ namespace Core.Specifications
             )
         {
             AddInclude(p => p.Categoria);
-            //ApplyPaging(0,5)
             ApplyPaging(libroParams.PageSize * (libroParams.PageIndex - 1), libroParams.PageSize);
 
             if (!string.IsNullOrEmpty(libroParams.Sort))
