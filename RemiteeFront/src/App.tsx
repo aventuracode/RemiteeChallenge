@@ -1,10 +1,15 @@
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { BookDetail } from "./pages/BookDetail/BookDetail";
 
 function App() {
   return (
-    <>
-      <h1>Vite + React</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/libro/:id" element={<BookDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
