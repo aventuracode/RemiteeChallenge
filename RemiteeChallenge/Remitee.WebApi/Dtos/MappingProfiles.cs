@@ -8,6 +8,7 @@ namespace WebApi.Dtos
         public MappingProfiles() {
             CreateMap<Libro, LibroDto>()
                 .ForMember(p => p.CategoriaNombre, x => x.MapFrom(a => a.Categoria.Nombre));
+            CreateMap<CreateLibroDto, Libro>();
         }
     }
 }

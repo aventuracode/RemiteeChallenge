@@ -71,5 +71,48 @@ namespace Remitee.WebApi.Controllers
             }
             return _mapper.Map<Libro, LibroDto>(libro);
         }
+
+        /// <summary>
+        /// Crea un nuevo libro
+        /// </summary>
+        /// <param name="createLibroDto">Datos del libro a crear</param>
+        /// <returns>Libro creado</returns>
+        /// <response code="201">Devuelve el libro creado</response>
+        /// <response code="400">Si los datos son inválidos</response>
+        /// <response code="500">Error al recuperar el libro creado</response>
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<LibroDto>> CreateLibro([FromBody] CreateLibroDto createLibroDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(new CodeErrorResponse(400, "Datos inválidos"));
+                }
+
+                var libro = _mapper.Map<CreateLibroDto, Libro>(createLibroDto);
+                libro.CreatedAt = DateTime.UtcNow;
+
+                await _libroRepository.Add(libro);
+
+                var spec = new LibroWithCategoriaSpecification(libro.Id);
+                var libroWithCategoria = await _libroRepository.GetByIdWithSpec(spec);
+
+                if (libroWithCategoria == null)
+                {
+                    return StatusCode(500, new CodeErrorResponse(500, "Error al recuperar el libro creado"));
+                }
+
+
+                return StatusCode(StatusCodes.Status201Created, libroWithCategoria);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new CodeErrorException(500, "Error al crear el libro", ex.Message));
+            }
+        }
     }
 }

@@ -31,9 +31,13 @@ namespace Core.Specifications
                         AddOrderByDescending(p => p.Descripcion);
                         break;
                     default:
-                        AddOrderBy(p => p.Titulo);
+                        AddOrderByDescending(p => p.CreatedAt);
                         break;
                 }
+            }
+            else
+            {
+                AddOrderByDescending(p => p.CreatedAt);
             }
         }
         public LibroWithCategoriaSpecification(int id) : base(x => x.Id == id)
