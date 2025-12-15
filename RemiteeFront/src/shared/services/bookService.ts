@@ -5,7 +5,7 @@ import type { PaginatedResponse } from '../types/paginatedResponse.type';
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5064/api';
 
 export const bookService = {
-  getBooks: async (pageIndex: number = 1, pageSize: number = 100): Promise<PaginatedResponse<Book>> => {
+  getBooks: async (pageIndex: number = 1, pageSize: number = 10): Promise<PaginatedResponse<Book>> => {
     const response = await axios.get<PaginatedResponse<Book>>(`${API_BASE_URL}/Libro`, {
       params: { pageIndex, pageSize }
     });

@@ -1,4 +1,3 @@
-import React from "react";
 import type { Book } from "../../../shared/types/book.type";
 interface IBookDetailCard {
   book: Book;

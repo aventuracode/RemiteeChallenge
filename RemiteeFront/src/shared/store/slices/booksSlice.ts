@@ -14,9 +14,10 @@ const initialState: BooksState = {
 
 export const fetchBooks = createAsyncThunk(
   'books/fetchBooks',
-  async (_, { rejectWithValue }) => {
+  async (params: { pageIndex?: number; pageSize?: number } = {}, { rejectWithValue }) => {
     try {
-      const response = await bookService.getBooks();
+      const { pageIndex = 1, pageSize = 10 } = params;
+      const response = await bookService.getBooks(pageIndex, pageSize);
       return response;
     } catch (error: unknown) {
       const message = error instanceof Error && 'response' in error 

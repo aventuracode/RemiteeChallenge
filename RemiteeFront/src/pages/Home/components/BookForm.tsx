@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../shared/store/hooks";
 import {
   clearError,
   createBook,
+  fetchBooks,
 } from "../../../shared/store/slices/booksSlice";
+import { categoriaService } from "../../../shared/services/categoriaService";
+import type { Categoria } from "../../../shared/types/categoria.type";
 
 export const BookForm = () => {
   const dispatch = useAppDispatch();
   const { loading, error } = useAppSelector((state) => state.books);
+  const [categorias, setCategorias] = useState<Categoria[]>([]);
+  const [loadingCategorias, setLoadingCategorias] = useState(true);
 
   const [formData, setFormData] = useState({
     titulo: "",
@@ -21,13 +26,32 @@ export const BookForm = () => {
     titulo: "",
     autor: "",
     descripcion: "",
+    categoriaId: "",
   });
+
+  useEffect(() => {
+    const fetchCategorias = async () => {
+      try {
+        const data = await categoriaService.getCategorias();
+        setCategorias(data);
+        if (data.length > 0) {
+          setFormData((prev) => ({ ...prev, categoriaId: data[0].id }));
+        }
+      } catch (err) {
+        console.error("Error al cargar categorías:", err);
+      } finally {
+        setLoadingCategorias(false);
+      }
+    };
+    fetchCategorias();
+  }, []);
 
   const validateForm = () => {
     const errors = {
       titulo: "",
       autor: "",
       descripcion: "",
+      categoriaId: "",
     };
     let isValid = true;
 
@@ -43,6 +67,11 @@ export const BookForm = () => {
 
     if (!formData.descripcion.trim()) {
       errors.descripcion = "La descripción es obligatoria";
+      isValid = false;
+    }
+
+    if (!formData.categoriaId) {
+      errors.categoriaId = "Debe seleccionar una categoría";
       isValid = false;
     }
 
@@ -63,20 +92,29 @@ export const BookForm = () => {
         titulo: "",
         autor: "",
         descripcion: "",
-        categoriaId: 1,
+        categoriaId: categorias.length > 0 ? categorias[0].id : 1,
         categoriaNombre: "",
       });
-      setValidationErrors({ titulo: "", autor: "", descripcion: "" });
+      setValidationErrors({
+        titulo: "",
+        autor: "",
+        descripcion: "",
+        categoriaId: "",
+      });
+      dispatch(fetchBooks({ pageIndex: 1, pageSize: 10 }));
     } catch (err) {
       console.error("Error al crear libro:", err);
     }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const finalValue = name === "categoriaId" ? Number(value) : value;
+    setFormData((prev) => ({ ...prev, [name]: finalValue }));
     if (validationErrors[name as keyof typeof validationErrors]) {
       setValidationErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -171,6 +209,42 @@ export const BookForm = () => {
           {validationErrors.descripcion && (
             <p className="text-red-500 text-sm mt-1">
               {validationErrors.descripcion}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="categoriaId"
+            className="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Categoría
+          </label>
+          <select
+            id="categoriaId"
+            name="categoriaId"
+            value={formData.categoriaId}
+            onChange={handleChange}
+            disabled={loadingCategorias}
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+              validationErrors.categoriaId
+                ? "border-red-500"
+                : "border-gray-300"
+            }`}
+          >
+            {loadingCategorias ? (
+              <option>Cargando categorías...</option>
+            ) : (
+              categorias.map((categoria) => (
+                <option key={categoria.id} value={categoria.id}>
+                  {categoria.nombre}
+                </option>
+              ))
+            )}
+          </select>
+          {validationErrors.categoriaId && (
+            <p className="text-red-500 text-sm mt-1">
+              {validationErrors.categoriaId}
             </p>
           )}
         </div>
